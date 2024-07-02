@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contoh Formulir Pemesanan Barang</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <br />
+
+      <h2 class="text-center">Formulir Registrasi</h2>
+
+      <div class="text-center mb-4">
+        <a href="index.html" class="btn btn-primary">Kembali ke Beranda</a>
+      </div>
+      <br /><br /><br />
+
+      <div class="row">
+        <div class="col-md-8">
+          <h4>Alamat billing</h4>
+          <form class="needs-validation" novalidate>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Nama depan</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder=""
+                  value=""
+                  required
+                />
+                <div class="invalid-feedback">Nama depan harus diisi.</div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Nama belakang</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder=""
+                  value=""
+                  required
+                />
+                <div class="invalid-feedback">Nama belakang harus diisi.</div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email"
+                >Email <span class="text-muted">(Wajib)</span></label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="contoh@emailku.com"
+              />
+              <div class="valid-feedback">Email valid.</div>
+            </div>
+            <div class="mb-3">
+              <label for="address">Alamat</label>
+              <input
+                type="text"
+                class="form-control"
+                id="address"
+                placeholder="Contoh: Perumahan Pondok Permai B4"
+                required
+              />
+              <div class="invalid-feedback">Alamat harus diisi.</div>
+            </div>
+
+            <!--pilihan-->
+
+            <div class="col-md-4 mb-3">
+              <label for="state">Daftar Gunung</label>
+              <select class="custom-select d-block w-100" id="state" required>
+                <option value="">--Pilih Gunung--</option>
+                <option>Carstensz Pyramid (Puncak Jaya)</option>
+                <option>Gunung Kerinci</option>
+                <option>Gunung Semeru</option>
+                <option>Gunung Rinjani</option>
+                <option>Gunung Bukit Raya</option>
+                <option>Gunung Latimojong</option>
+                <option>Gunung Binaiya</option>
+              </select>
+              <div class="invalid-feedback">Pilih Gunung yang sesuai.</div>
+            </div>
+
+            <div>
+              <label for="zip">Kota/Kabupaten</label>
+              <input
+                type="text"
+                class="form-control"
+                id="zip"
+                placeholder=""
+                required
+              />
+              <div class="invalid-feedback">Alamat Kabupaten diisi.</div>
+            </div>
+            <br />
+
+            <div>
+              <label for="zip">Provinsi</label>
+              <input
+                type="text"
+                class="form-control"
+                id="zip"
+                placeholder=""
+                required
+              />
+              <div class="invalid-feedback">Alamat Provinsi diisi.</div>
+            </div>
+            <br />
+
+            <div>
+              <label for="zip">Kode Pos</label>
+              <input
+                type="text"
+                class="form-control"
+                id="zip"
+                placeholder=""
+                required
+              />
+              <div class="invalid-feedback">Kode pos harus diisi.</div>
+            </div>
+            <br />
+
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="save-info"
+              />
+              <label class="custom-control-label" for="save-info"
+                >Simpan informasi ini untuk selanjutnya.</label
+              >
+            </div>
+            <hr class="mb-4" />
+            <h4 class="mb-3">Pembayaran</h4>
+            <div class="d-block my-3">
+              <div class="custom-control custom-radio">
+                <input
+                  id="credit"
+                  name="paymentMethod"
+                  type="radio"
+                  class="custom-control-input"
+                  checked
+                  required
+                />
+                <label class="custom-control-label" for="credit"
+                  >Kartu kredit</label
+                >
+              </div>
+              <div class="custom-control custom-radio">
+                <input
+                  id="debit"
+                  name="paymentMethod"
+                  type="radio"
+                  class="custom-control-input"
+                  required
+                />
+                <label class="custom-control-label" for="debit"
+                  >Kartu debit</label
+                >
+              </div>
+              <div class="custom-control custom-radio">
+                <input
+                  id="paypal"
+                  name="paymentMethod"
+                  type="radio"
+                  class="custom-control-input"
+                  required
+                />
+                <label class="custom-control-label" for="paypal">PayPal</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="cc-name">Nama pemilik kartu</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cc-name"
+                  placeholder=""
+                  required
+                />
+                <label for="cc-name"
+                  >Masukkan nama lengkap yang tertera pada kartu.</label
+                >
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="cc-number">Nomor kartu kredit</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cc-number"
+                  placeholder=""
+                  required
+                />
+                <div class="invalid-feedback">
+                  Nomor kartu kredit wajib diisi.
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <label for="cc-expiration">Masa kedaluwarsa</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cc-expiration"
+                  placeholder=""
+                  required
+                />
+                <div class="invalid-feedback">
+                  Masa kedaluwarsa wajib diisi.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="cc-cvv">Kode CVV</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cc-cvv"
+                  placeholder=""
+                  required
+                />
+                <div class="invalid-feedback">Kode CVV wajib diisi.</div>
+              </div>
+            </div>
+            <hr class="mb-4" />
+            <button
+              id="mybtn"
+              class="btn btn-primary btn-lg btn-block"
+              type="submit"
+            >
+              Proses pembayaran
+            </button>
+            <h5 class="text-center">
+              (Informasi Selanjutnya Akan Dikirimkan Melalui E-mail)
+            </h5>
+          </form>
+        </div>
+      </div>
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">
+          &copy; 2023 TopiGunung - Pengenalan Perancangan Web | Amikom
+        </p>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="checkout.js"></script>
+  </body>
+</html>

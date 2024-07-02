@@ -1,0 +1,49 @@
+.custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+}
+
+.custom-select {
+  display: none; /* Sembunyikan select asli */
+}
+
+.custom-select-trigger {
+  display: block;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.custom-options {
+  position: absolute;
+  display: none;
+  top: auto;
+
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+}
+
+.custom-options.active {
+  display: block;
+}
+
+.custom-options .custom-option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.custom-options .custom-option:hover {
+  background: #f1f1f1;
+}
